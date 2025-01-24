@@ -8,14 +8,15 @@ import { useState } from "react";
 import Mdk from "@interlinklabs/mdk";
 
 const Root = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log("isLoggedIn", isLoggedIn);
+  console.log(Mdk);
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
   };
 
   const handleLoginFailure = () => {
-    console.error("Login failed");
+    //console.error("Login failed");
   };
 
   return (
@@ -28,14 +29,16 @@ const Root = () => {
         >
           {({ open }) => (
             <div
-              style={{ textAlign: "center", marginTop: "20px", width: "100%" }}
+              style={{
+                textAlign: "center",
+                marginTop: "20px",
+              }}
             >
               <button
                 onClick={open}
                 style={{
                   padding: "10px 20px",
-                  fontSize: "80px",
-                  color: "white",
+                  fontSize: "16px",
                 }}
               >
                 Login to Play XO Game
